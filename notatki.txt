@@ -1,0 +1,15 @@
+komendyGIT
+
+	git checkout <nazwa brancha> - przełączenie na inny branch
+	git checkout -b <nazwa brancha> - tworzy nowy branch
+	<> - umowna nazwa zmiennej
+
+InteliJ
+
+fori - pętla for
+ctrl + / - komentarz
+ctrl + alt + l - formatuje kod
+alt + j - zaznacza kolejne wystąpienie zaznaczonego tekstu
+ctrl + d - duplikacja linijki
+shift + F10 - odpal kod
+ctrl + x - usuń linijke gdzie jest kursor
