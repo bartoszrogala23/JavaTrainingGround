@@ -6,38 +6,49 @@ import java.util.Scanner;
 public class LoginHomeworkDoWhile {
     public static void main(String[] args) {
 
+        int attempt = -3;
         String login = "20907654";
         String password = "H4sło66";
-
+        String login_answer = "";
+        String password_answer = "";
 
         Scanner scanner = new Scanner(System.in);
-        scanner.useLocale(Locale.US);
-
-        String answer = "" ;
-        String answer2 = "" ;
+        Scanner scanner2 = new Scanner(System.in);
 
         System.out.println("Login to online banking");
+
         do {
+            scanner.useLocale(Locale.US);
+            System.out.println("login:");
+            login_answer = scanner.next();
 
-            System.out.println("Login: ");
-            answer = scanner.next();
-
-            if (answer.equals(login)) {
+            if (login_answer.equals(login)) {
+                scanner2.useLocale(Locale.US);
                 System.out.println("password:");
-                answer2 = scanner.next();
-                if (!answer2.equals(password)){
-                    System.out.println("incorrect password.");
-                }
-            } else {
-                System.out.println("incorrect login.");
+                password_answer = scanner2.next();
             }
-        } while(!answer2.equals(password));{
+
+                if (!password_answer.equals(password)) {
+                    System.out.println("wrong password.");
+                    attempt++;
+                    System.out.println("attempts left: " + -attempt);
+                    if (attempt == 0) {
+                        System.out.println("Your online bank  account is blocked. Please contact bank branch.");
+                    }
+                }
+
+
+             else {
+                System.out.println("wrong login, try again.");
+
+            }
+
+
+        } while (!password_answer.equals(password));
+        {
             System.out.println("You are logged in!");
 
         }
-
-
     }
-
 }
 
