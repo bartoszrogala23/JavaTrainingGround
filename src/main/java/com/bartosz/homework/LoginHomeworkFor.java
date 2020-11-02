@@ -19,6 +19,7 @@ public class LoginHomeworkFor {
             System.out.println("login:");
             int answer = scanner.nextInt();
 
+
             if (answer == login){
                 scanner2.useLocale(Locale.US);
                 System.out.println("password:");
@@ -30,6 +31,9 @@ public class LoginHomeworkFor {
                     System.out.println("wrong password.");
                     attempt++;
                     System.out.println("attempts left: " + -attempt);
+                    if (attempt == 0) {
+                        System.out.println("Your online bank  account is blocked. Please contact bank branch.");
+                    }
                 }
 
             }
@@ -42,11 +46,9 @@ public class LoginHomeworkFor {
 
 
         }
-
-
-
-
-
-
     }
+
+
+
+
 }
