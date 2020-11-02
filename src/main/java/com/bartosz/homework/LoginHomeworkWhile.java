@@ -12,11 +12,14 @@ wymagania:
 3. w przypadku sukcesu powinno zostac wypisane odpowiedni komunikat
  */
 public class LoginHomeworkWhile {
-    public static void main (String[] args){
+    public static void main(String[] args) {
 
         int attempt = -3;
-        int login = 20907654;
+        String login = "20907654";
         String password = "H4sło66";
+        String login_answer = "";
+        String password_answer = "";
+
         Scanner scanner = new Scanner(System.in);
         Scanner scanner2 = new Scanner(System.in);
 
@@ -25,17 +28,17 @@ public class LoginHomeworkWhile {
         while (attempt < 0) {
             scanner.useLocale(Locale.US);
             System.out.println("login:");
-            int answer = scanner.nextInt();
+            login_answer = scanner.next();
 
-
-            if (answer == login){
+            if (login_answer.equals(login)) {
                 scanner2.useLocale(Locale.US);
                 System.out.println("password:");
-                if (scanner2.next().equals(password)){
-                    System.out.println("u are logged in.");
+                password_answer = scanner2.next();
+
+                if (password_answer.equals(password)) {
+                    System.out.println("You are logged in");
                     break;
-                }
-                else {
+                } else {
                     System.out.println("wrong password.");
                     attempt++;
                     System.out.println("attempts left: " + -attempt);
@@ -44,20 +47,22 @@ public class LoginHomeworkWhile {
                     }
                 }
 
-            }
-            else {
-                System.out.println("this login does not exist.");
-            }
 
-
-
-
+            } else {
+                System.out.println("wrong login, try again.");
 
             }
+
+
         }
-
-
-
-
     }
+}
+
+
+
+
+
+
+
+
 
