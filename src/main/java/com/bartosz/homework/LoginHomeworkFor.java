@@ -18,7 +18,7 @@ public class LoginHomeworkFor {
 
         System.out.println("Login to online banking");
 
-        for (int attempt = -3; attempt < 0; attempt++) {
+        for (int attempt = -3; attempt <= 0; attempt++) {
             scanner.useLocale(Locale.US);
             System.out.println("login:");
             login_answer = scanner.next();
@@ -33,7 +33,6 @@ public class LoginHomeworkFor {
                     break;
                 } else {
                     System.out.println("wrong password.");
-                    attempt++;
                     System.out.println("attempts left: " + -attempt);
                     if (attempt == 0) {
                         System.out.println("Your online bank  account is blocked. Please contact bank branch.");
