@@ -13,6 +13,7 @@ alt + j - zaznacza kolejne wystąpienie zaznaczonego tekstu
 ctrl + d - duplikacja linijki
 shift + F10 - odpal kod
 ctrl + x - usuń linijke gdzie jest kursor
+shift + F6 - skrót do refaktoryzacji (zmiana nazw zmiennych metod lub klas)
 
  if (password.equals(scanner2.next("H4sło"))){
                     System.out.println("u r logged in.");

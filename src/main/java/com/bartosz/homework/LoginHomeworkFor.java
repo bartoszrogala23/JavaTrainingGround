@@ -7,6 +7,7 @@ public class LoginHomeworkFor {
 
     public static void main (String[] args) {
 
+
         String login = "20907654";
         String password = "H4sło66";
         String login_answer = "";
@@ -17,7 +18,7 @@ public class LoginHomeworkFor {
 
         System.out.println("Login to online banking");
 
-        for (int attempt = -3; attempt < 0; ) {
+        for (int attempt = -3; attempt < 0; attempt++) {
             scanner.useLocale(Locale.US);
             System.out.println("login:");
             login_answer = scanner.next();
@@ -40,9 +41,9 @@ public class LoginHomeworkFor {
                 }
 
 
-            } else {
+            }
+            else {
                 System.out.println("wrong login, try again.");
-
             }
 
 

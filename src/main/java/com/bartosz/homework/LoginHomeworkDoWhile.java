@@ -27,6 +27,9 @@ public class LoginHomeworkDoWhile {
                 System.out.println("password:");
                 password_answer = scanner2.next();
             }
+            else {
+                System.out.println("wrong login, try again.");
+            }
 
                 if (!password_answer.equals(password)) {
                     System.out.println("wrong password.");
@@ -38,10 +41,7 @@ public class LoginHomeworkDoWhile {
                 }
 
 
-             else {
-                System.out.println("wrong login, try again.");
 
-            }
 
 
         } while (!password_answer.equals(password));

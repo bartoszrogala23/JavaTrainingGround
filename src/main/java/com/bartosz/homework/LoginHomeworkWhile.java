@@ -14,35 +14,36 @@ wymagania:
 public class LoginHomeworkWhile {
     public static void main(String[] args) {
 
-        int attempt = -3;
+        int availableAttempts = 3;
         String login = "20907654";
         String password = "H4sło66";
         String login_answer = "";
         String password_answer = "";
 
         Scanner scanner = new Scanner(System.in);
-        Scanner scanner2 = new Scanner(System.in);
+        scanner.useLocale(Locale.US);
+
 
         System.out.println("Login to online banking");
 
-        while (attempt < 0) {
-            scanner.useLocale(Locale.US);
+        while (availableAttempts > 0) {
+
             System.out.println("login:");
-            login_answer = scanner.next();
+            login_answer = scanner.nextLine();
 
             if (login_answer.equals(login)) {
-                scanner2.useLocale(Locale.US);
                 System.out.println("password:");
-                password_answer = scanner2.next();
+                password_answer = scanner.nextLine();
 
                 if (password_answer.equals(password)) {
                     System.out.println("You are logged in");
                     break;
                 } else {
                     System.out.println("wrong password.");
-                    attempt++;
-                    System.out.println("attempts left: " + -attempt);
-                    if (attempt == 0) {
+                    availableAttempts-=1;
+                    // to jest równe następującemu zapisowi: availableAttempts = availableAttempts -1
+                    System.out.println("attempts left: " + availableAttempts);
+                    if (availableAttempts == 0) {
                         System.out.println("Your online bank  account is blocked. Please contact bank branch.");
                     }
                 }
