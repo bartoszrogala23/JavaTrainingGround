@@ -9,7 +9,7 @@ public class MapsExample {
     public static void main(String[] args) {
 
 
-        Map<String, Integer> teamPrices = new HashMap<>();
+        Map<String , Integer> teamPrices = new HashMap<>();
 
         teamPrices.put("Arsenal", 150);
         teamPrices.put("Everton", 150);
