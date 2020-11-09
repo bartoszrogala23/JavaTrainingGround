@@ -7,6 +7,7 @@ public class MapHomework {
     public static void main(String[] args) {
 
 
+
         Map<String, String> client01 = new HashMap<>();
         client01.put("id", "01");
         client01.put("name", "Bartosz");
@@ -43,6 +44,31 @@ public class MapHomework {
         client05.put("accNumber", "20103280256920101212122312");
         client05.put("balance", "10000");
 
+        Integer depositedvalue = 5000;
+        Integer withdrawndvalue = 2500;
+        Integer withdrawndvalue2 = 500;
+
+        System.out.println(client05.get("name") + " " + client05.get("surname") + " dokonuje wpłaty w wysokości: " + depositedvalue);
+        Integer.parseInt(client05.get("balance"));
+        Integer temp1 = Integer.parseInt(client05.get("balance"));
+        temp1 = temp1 + depositedvalue;
+        String newValue = String.valueOf(temp1);
+        client05.replace("balance", newValue);
+
+        System.out.println(client05.get("name") + " " + client05.get("surname") + " dokonuje wypłaty w wysokości: " + withdrawndvalue);
+        Integer.parseInt(client05.get("balance"));
+        Integer temp2 = Integer.parseInt(client05.get("balance"));
+        temp2 = temp2 - withdrawndvalue;
+        String newValue2 = String.valueOf(temp2);
+        client05.replace("balance", newValue2);
+
+        System.out.println(client05.get("name") + " " + client05.get("surname") + " dokonuje wypłaty w wysokości: " + withdrawndvalue2);
+        Integer.parseInt(client05.get("balance"));
+        Integer temp3 = Integer.parseInt(client05.get("balance"));
+        temp3 = temp3 - withdrawndvalue2;
+        String newValue3 = String.valueOf(temp3);
+        client05.replace("balance", newValue3);
+
         System.out.println(client01.get("name") + " " + client01.get("surname") + " o numerze id : " + client01.get("id") + " posiada na rachunku " + client01.get("accNumber") + " kwotę: " + client01.get("balance") + " PLN.");
         System.out.println();
         System.out.println(client02.get("name") + " " + client02.get("surname") + " o numerze id : " + client02.get("id") + " posiada na rachunku " + client02.get("accNumber") + " kwotę: " + client02.get("balance") + " PLN.");
@@ -54,34 +80,7 @@ public class MapHomework {
         System.out.println(client05.get("name") + " " + client05.get("surname") + " o numerze id : " + client05.get("id") + " posiada na rachunku " + client05.get("accNumber") + " kwotę: " + client05.get("balance") + " PLN.");
         System.out.println();
 
-        Integer depositedvalue = 5000;
-        Integer withdrawndvalue = 2500;
-        Integer withdrawndvalue2 = 500;
 
-
-        Integer.parseInt(client05.get("balance"));
-        Integer temp1 = Integer.parseInt(client05.get("balance"));
-        temp1 = temp1 + depositedvalue;
-        String newValue = String.valueOf(temp1);
-        client05.replace("balance", newValue);
-        System.out.println(client05.get("name") + " " + client05.get("surname") + " o numerze id : " + client05.get("id") + " posiada na rachunku " + client05.get("accNumber") + " kwotę: " + client05.get("balance") + " PLN.");
-        System.out.println();
-
-        Integer.parseInt(client05.get("balance"));
-        Integer temp2 = Integer.parseInt(client05.get("balance"));
-        temp2 = temp2 - withdrawndvalue;
-        String newValue2 = String.valueOf(temp2);
-        client05.replace("balance", newValue2);
-        System.out.println(client05.get("name") + " " + client05.get("surname") + " o numerze id : " + client05.get("id") + " posiada na rachunku " + client05.get("accNumber") + " kwotę: " + client05.get("balance") + " PLN.");
-        System.out.println();
-
-        Integer.parseInt(client05.get("balance"));
-        Integer temp3 = Integer.parseInt(client05.get("balance"));
-        temp3 = temp3 - withdrawndvalue2;
-        String newValue3 = String.valueOf(temp3);
-        client05.replace("balance", newValue3);
-        System.out.println(client05.get("name") + " " + client05.get("surname") + " o numerze id : " + client05.get("id") + " posiada na rachunku " + client05.get("accNumber") + " kwotę: " + client05.get("balance") + " PLN.");
-        System.out.println();
 
     }
 }
