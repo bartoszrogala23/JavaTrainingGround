@@ -30,7 +30,6 @@ public class LoginHomeworkDoWhile {
             else {
                 System.out.println("wrong login, try again.");
             }
-
                 if (!password_answer.equals(password)) {
                     System.out.println("wrong password.");
                     attempt++;
@@ -39,16 +38,9 @@ public class LoginHomeworkDoWhile {
                         System.out.println("Your online bank  account is blocked. Please contact bank branch.");
                     }
                 }
-
-
-
-
-
         } while (!password_answer.equals(password));
         {
             System.out.println("You are logged in!");
-
         }
     }
 }
-
