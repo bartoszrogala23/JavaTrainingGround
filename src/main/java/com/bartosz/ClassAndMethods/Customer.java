@@ -2,7 +2,9 @@ package com.bartosz.ClassAndMethods;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 //<> - określają typ w kolekcji, np. List<BigDecimal> Map<String, String>
 
@@ -13,8 +15,10 @@ public class Customer {
     private BigDecimal balance;
     private String accNumber;
     private List<BigDecimal> ledger;
+    private Map<String, String> documents;
 
-    public Customer(int id, String name, String surname, BigDecimal balance, String accNumber) {
+
+    public Customer(int id, String name, String surname, BigDecimal balance, String accNumber, HashMap documents) {
         this.id = id;
         this.name = name;
         this.surname = surname;
@@ -22,6 +26,11 @@ public class Customer {
         this.accNumber = accNumber;
         this.ledger = new ArrayList<>();
         this.ledger.add(balance);
+        this.documents = new HashMap<String, String>();
+        this.documents.put("id card", "");
+        this.documents.put("PESEL", "");
+        this.documents.put("driving license", "");
+
 
     }
 
@@ -57,4 +66,10 @@ public class Customer {
     public List<BigDecimal> getLedger() {
         return ledger;
     }
+
+    public Map<String, String> getDocuments() {
+        return documents;
+    }
 }
+
+
