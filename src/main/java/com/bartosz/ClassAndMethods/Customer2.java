@@ -9,25 +9,22 @@ import java.util.Map;
 
 //<> - określają typ w kolekcji, np. List<BigDecimal> Map<String, String>
 
-public class Customer {
+public class Customer2 {
     private int id;
     private String name;
     private String surname;
-    private BigDecimal balance;
+    private int balance;
     private String accNumber;
-    private List<BigDecimal> ledger;
+    private List<Integer> ledger;
     private Map<String, String> documents = new HashMap<>();
 
 
 
-    public Customer(int id, String name, String surname, BigDecimal balance, String accNumber) {
+    public Customer2(int id, String name, String surname, int balance, String accNumber) {
         this.id = id+1;
         this.name = name;
         this.surname = surname;
         this.balance = balance;
-            if (this.balance.compareTo(debitLimit)>1){
-                System.out.println("debit avilable: " + getBalance().multiply(BigDecimal.valueOf(0.2)));
-            };
         this.accNumber = accNumber;
         this.ledger = new ArrayList<>();
         this.ledger.add(balance);
@@ -64,23 +61,35 @@ public class Customer {
         return name + " " + surname;
     }
 
-    public void deposit(BigDecimal amount) {
-        balance = balance.add(amount);
-        ledger.add(amount);
-    }
-
-    public void deposit(Integer amount) {
-        deposit(new BigDecimal(amount));
-    }
-
-    public BigDecimal getBalance() {
-        return balance;
-    }
-
-    public List<BigDecimal> getLedger() {
+    public List<Integer> getLedger() {
         return ledger;
     }
 
+    public void setLedger(List<Integer> ledger) {
+        this.ledger = ledger;
+    }
+
+    private void setBalance(int balance) {
+        this.balance = balance;
+    }
+
+    public int getBalance() {
+        return balance;
+    }
+
+    public int depositMoney(int value){
+        getBalance();
+        int newBalance = balance + value;
+        setBalance(newBalance);
+        return balance;
+    }
+
+    public  int withdrawMoney(int value){
+        getBalance();
+        int newBalance = balance - value;
+        setBalance(newBalance);
+        return balance;
+    }
 
 }
 

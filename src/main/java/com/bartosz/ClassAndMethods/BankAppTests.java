@@ -1,6 +1,8 @@
 package com.bartosz.ClassAndMethods;
 
 import java.math.BigDecimal;
+import java.util.Locale;
+import java.util.Scanner;
 
 // poczytaj o javafaker i jak tego uzyc zeby stworzyc np. wielu klientów  w petli(lista);
 // praca domowa: wypłaty, obsługa wpłat i wypłat (listy?) (ujemne!),
@@ -13,19 +15,20 @@ import java.math.BigDecimal;
 public class BankAppTests {
     public static void main(String[] args) {
 
-        Customer c1 = new Customer(1, "Bartosz", "Rogala",
-                BigDecimal.valueOf(1000), "203050505050");
-        Customer c2 = new Customer(2, "Tom", "Rak",
-                BigDecimal.valueOf(5000), "203050505050");
-        Customer c3 = new Customer(3, "Adam", "Tupaj",
-                BigDecimal.valueOf(6000), "203050505050");
-        Customer c4 = new Customer(4, "Rafał", "Kot",
-                BigDecimal.valueOf(8000), "203050505050");
-        Customer c5 = new Customer(5, "Krystian", "Front",
-                BigDecimal.valueOf(1200), "203050505050");
-        Customer c6 = new Customer(6, "Adrian", "Tok",
-                BigDecimal.valueOf(5000), "203050505050");
+        Scanner scanner = new Scanner(System.in);
+        scanner.useLocale(Locale.US);
 
-        System.out.println(c2);
+        Customer2 c1 = new Customer2(1, "Bartosz", "Rogala",
+                5000, "205020502020");
+
+       c1.depositMoney(100);
+        System.out.println(c1.getBalance());
+
+        c1.withdrawMoney(300);
+        System.out.println(c1.getBalance());
+
+
     }
+
+
 }
