@@ -14,7 +14,7 @@ public class BankApp {
     public static void main(String[] args) {
 
         Customer customer1 = new Customer(1, "Bartosz", "Rogala",
-                new BigDecimal(1000), "20103280256920101212122312",);
+                new BigDecimal(1000), "20103280256920101212122312");
         System.out.println(customer1);
         System.out.println(customer1.getFullName());
         System.out.println("balance: " + customer1.getBalance());
@@ -27,5 +27,6 @@ public class BankApp {
         System.out.println("balance: " + customer1.getBalance());
         System.out.println("ledger: " + customer1.getLedger());
         ;
+
     }
 }
