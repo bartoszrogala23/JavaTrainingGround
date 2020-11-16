@@ -39,6 +39,7 @@ public class LoginHomeworkDoWhile {
                     }
                 }
         } while (!password_answer.equals(password));
+
         {
             System.out.println("You are logged in!");
         }

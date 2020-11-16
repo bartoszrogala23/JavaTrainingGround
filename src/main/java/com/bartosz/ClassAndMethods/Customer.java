@@ -8,8 +8,10 @@ import java.util.Map;
 
 
 //<> - określają typ w kolekcji, np. List<BigDecimal> Map<String, String>
+// do statycznych metod możesz sie odwoływać w niestatycznych metodach ale nigdy odwrotnie;
 
 public class Customer {
+    private static int baseID = 0;
     private int id;
     private String name;
     private String surname;
@@ -20,14 +22,14 @@ public class Customer {
 
 
 
-    public Customer(int id, String name, String surname, BigDecimal balance, String accNumber) {
-        this.id = id+1;
+    public Customer(String name, String surname, BigDecimal balance, String accNumber) {
+        baseID += 1;
+        this.id = baseID;
+//        zapis powyżej baseID += 1; this.id = baseID; powoduje ze każdy kolejny stworzony
+//        klient bedzie mial nowe ID
         this.name = name;
         this.surname = surname;
         this.balance = balance;
-            if (this.balance.compareTo(debitLimit)>1){
-                System.out.println("debit avilable: " + getBalance().multiply(BigDecimal.valueOf(0.2)));
-            };
         this.accNumber = accNumber;
         this.ledger = new ArrayList<>();
         this.ledger.add(balance);
@@ -37,9 +39,10 @@ public class Customer {
         this.documents.put("driving license", "");
     }
 
-
-
-    BigDecimal debitLimit = BigDecimal.valueOf(4999);
+    public void setDocument(String rodzajDokumentu,String nrDokumentu){
+        documents.put(rodzajDokumentu, nrDokumentu);
+    }
+    // mozemy zastosować enum zamiast rodzaju dokumentu - w przyszlosci
 
     public void setSurname() {
         surname.replace(surname,"");

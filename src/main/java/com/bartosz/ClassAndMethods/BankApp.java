@@ -4,11 +4,11 @@
 //
 //// poczytaj o javafaker i jak tego uzyc zeby stworzyc np. wielu klientów  w petli(lista);
 //// praca domowa: wypłaty, obsługa wpłat i wypłat (listy?) (ujemne!),
-//// opcje zmiany nazwiska, id nieprzekazywany jako parametr do konstruktora tylko nadawany automatycznie
-//// przy tworzeniu nowego klienta; zapytanie o debet (zmienna debet BigDecimal zalezny od 20% najwiekszej
+//// opcje zmiany nazwiska (setter) id nieprzekazywany jako parametr do konstruktora tylko nadawany automatycznie
+//// zapytanie o debet (zmienna debet BigDecimal zalezny od 20% najwiekszej
 //// wpłaty, debet mozna uzyskać jesli mamy conajmniej 5k na koncie;
 //// mapa - dokumenty<string string> klucz D.O., PESEL, prawo jazdy i prawa jazdy moze nie byc -
-////  jezli pobierasz prawo jazdy i go nie ma to wyswietl komunikat (IF)
+////  jezli pobierasz prawo jazdy i go nie ma to wyswietl komunikat (IF) getter
 //
 //public class BankApp {
 //    public static void main(String[] args) {
