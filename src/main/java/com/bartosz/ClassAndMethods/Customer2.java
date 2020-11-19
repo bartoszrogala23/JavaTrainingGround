@@ -14,7 +14,9 @@ public class Customer2 {
     private int balance;
     private String accNumber;
     private List<Integer> ledger;
-    public Map<String, Object> documents = new HashMap<>();
+    public Map<String, String> documents = new HashMap<>();
+
+
 
     // konstruktor klienta
     public Customer2(int id, String name, String surname, int balance, String accNumber) {
@@ -28,10 +30,7 @@ public class Customer2 {
         this.accNumber = accNumber;
         this.ledger = new ArrayList<>();
         this.ledger.add(balance);
-        this.documents = new HashMap<String, Object>();
-        this.documents.put("ID card", "1");
-        this.documents.put("PESEL", "2");
-        this.documents.put("driving license", "3");
+        this.documents = new HashMap<String, String>();
     }
 
 
@@ -62,6 +61,7 @@ public class Customer2 {
     }
 
     public List<Integer> getLedger() {
+        System.out.println(ledger);
         return ledger;
     }
 
@@ -74,18 +74,15 @@ public class Customer2 {
 //        return askForDebit();
 //    }
 
-    public String askForDebit() {
+    public void askForDebit() {
         if (balance >= 5000) {
-            double x = Collections.max(ledger);
-            double debitModifier = x * 0.2;
+            double temp1 = Collections.max(ledger);
+            double debitModifier = temp1 * 0.2;
             System.out.println("debit avilable: " + debitModifier);
 
         } else {
             System.out.println("debit unavilable");
         }
-        ;
-//nie wiem jaki modyfikator dodać więc błędem w sztuce jest ten null :)
-        return null;
     }
 
     ;
@@ -114,9 +111,19 @@ public class Customer2 {
             ledger.add(-value);
         }
     }
+    public void setDocument(String rodzajDokumentu,String nrDokumentu) {
+        documents.put(rodzajDokumentu, nrDokumentu);
+    }
 
 
-}
+
+    public Map<String, String> getDocuments() {
+        return documents;
+//        if (documents.containsKey("Prawo jazdy") & documents.containsValue("")){
+//            System.out.println("driving license is not added.");
+        }
+    }
+
 
 
 

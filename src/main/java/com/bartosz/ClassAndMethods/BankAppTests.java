@@ -27,12 +27,12 @@ import java.util.Scanner;
 public class BankAppTests {
     public static void main(String[] args) {
 
-        Scanner scanner = new Scanner(System.in);
-        scanner.useLocale(Locale.US);
-
         Customer2 c1 = new Customer2(1, "Bartosz", "Rogala",
                 5000, "205020502020");
-
+        c1.setDocument("Dowód obosbity", "ABC203040");
+        c1.setDocument("PESEL", "90120645698");
+        c1.setDocument("Prawo jazdy", "PJ108060");
+        c1.getDocuments();
 
 //
 //       c1.depositMoney(100);
@@ -50,10 +50,13 @@ public class BankAppTests {
         c1.depositMoney(300);
         c1.withdrawMoney(6000);
 
+        c1.getLedger();
 
-        System.out.println(c1.getLedger());
+        c1.askForDebit();
 
-        System.out.println(c1.askForDebit());
+
+
+
 
 
     }
