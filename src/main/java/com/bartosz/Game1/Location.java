@@ -23,33 +23,73 @@ package com.bartosz.Game1;
 import java.util.HashMap;
 import java.util.Map;
 
+
+
 public class Location {
-     int locationID;
+    private final int locationID;
      String description;
-    Map <Integer, String> location;
+    private final HashMap<Direction, Integer> exits ;
 
-//        location.put(home.locationID, home);
-//        location.put(castle.locationID, castle);
-//        location.put(cave.locationID, cave);
-//        location.put(bridge.locationID, bridge);
 
+//    konstruktor - metoda która pokrywa szkielet (klasę) mięśniami.
     public Location(int locationID, String description) {
-        this.locationID = locationID =+ 1;
+        this.locationID = locationID;
         this.description = description;
-        Location crossroads = new Location(locationID,"crossroads" );
-        Location home = new Location(locationID,"home" );
-        Location castle = new Location(locationID,"castle" );
-        Location cave = new Location(locationID,"cave" );
-        Location bridge =  new Location(locationID,"bridge" );
+//        w przypadku nowego obiektu nie musisz podawać typów zmiennych
+//        bo zaciaga je z typów przy deklaracji zmiennej.
+
+//        nie wiem czemu akurat nowa hashmapa a nie ta z klasy (linijka 31)
+        this.exits = new HashMap<>();
     }
 
+    public Location(int locationID, HashMap<Direction, Integer> exits){
+        this.locationID=locationID;
+        this.exits = exits;
+    };
 
-    public void setLocationID(int locationID) {
-        this.locationID = locationID =+1 ;
+    public Location(int locationID, String description, HashMap<Direction, Integer> exits){
+        this.locationID=locationID;
+        this.description=description;
+        this.exits = exits;
     }
+
 
     public int getLocationID() {
         return locationID;
     }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public HashMap<Direction, Integer> getExits() {
+        return exits;
+    }
+
+//    nie rozumiem zapisu { this.exits.put(direction,locationID);}
+// createexits jest metodą o parametrach direction, locactionid, która uzupełnia
+// hashmape exits (zadeklarowana w klasie).
+    public void createExit(Direction direction, int locationID){
+        if (locationID == this.locationID){
+            throw new RuntimeException("wyjście z lokacji się zapętla");
+        }
+        this.exits.put(direction,locationID);
+
+    }
+
+    @Override
+    public String toString() {
+        return "Location{" +
+                "locationID=" + locationID +
+                ", description='" + description + '\'' +
+                ", exits=" + exits +
+                '}';
+    }
+
+    public Integer takeExit (Direction direction){
+        return this.exits.get(direction);
+    }
 }
+
+
 

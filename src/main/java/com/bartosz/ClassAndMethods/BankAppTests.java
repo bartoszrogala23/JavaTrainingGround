@@ -50,9 +50,17 @@ public class BankAppTests {
         c1.depositMoney(300);
         c1.withdrawMoney(6000);
 
+//        c1.getLedger();
+//
+//        c1.getDebitAmount();
+
+        System.out.println(c1);
+
+        c1.turnOnDebit();
+
         c1.getLedger();
 
-        c1.askForDebit();
+
 
 
 

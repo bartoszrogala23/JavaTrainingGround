@@ -2,6 +2,7 @@ package com.bartosz.ClassAndMethods;
 
 import java.math.BigDecimal;
 import java.util.*;
+import java.util.stream.Collectors;
 
 
 //<> - określają typ w kolekcji, np. List<BigDecimal> Map<String, String>
@@ -15,6 +16,8 @@ public class Customer2 {
     private String accNumber;
     private List<Integer> ledger;
     public Map<String, String> documents = new HashMap<>();
+    private int debit;
+
 
 
 
@@ -31,6 +34,7 @@ public class Customer2 {
         this.ledger = new ArrayList<>();
         this.ledger.add(balance);
         this.documents = new HashMap<String, String>();
+        this.debit = 0;
     }
 
 
@@ -53,8 +57,13 @@ public class Customer2 {
     }
 
     public String getFullName() {
-        return name + " " + surname;
+//        return name + " " + surname;
+//    alternatywa do powyzszej
+        return String.format("%s %s", name, surname);
+// string. format do formatowania stringów. %s oznacza że pojawi się (s)tring;
+//      %d oznacza że pojawi się (d)ecimal -> integer;
     }
+
 
     public void setId(int id) {
         this.id = id;
@@ -74,26 +83,39 @@ public class Customer2 {
 //        return askForDebit();
 //    }
 
-    public void askForDebit() {
+    public int getDebitAmount() {
         if (balance >= 5000) {
-            double temp1 = Collections.max(ledger);
+            List<Integer> temp2ledger = new ArrayList<>(ledger);
+            temp2ledger.remove(0);
+            double temp1 = Collections.max(temp2ledger);
             double debitModifier = temp1 * 0.2;
             System.out.println("debit avilable: " + debitModifier);
-
+            return (int) debitModifier;
         } else {
             System.out.println("debit unavilable");
+            return 0;
         }
     }
 
     ;
 
+// moja metoda getBalance = approved ale robimy inny sposób dla treningu
+//    public int getBalance() {
+//        if (balance >= 5000) {
+//            System.out.println("debit avilable");
+//            return balance + isDebitAvilable();
+//        };
+//        return balance;
+//    }
 
-    public int getBalance() {
-        if (balance >= 5000) {
-            System.out.println("debit avilable");
-        }
-        ;
-        return balance;
+
+
+        public int getBalance2() {
+        return balance + debit;
+    }
+
+    public void turnOnDebit(){
+            debit = getDebitAmount();
     }
 
 
@@ -104,25 +126,25 @@ public class Customer2 {
 
     public void withdrawMoney(int value) {
         if (value > balance) {
-            System.out.println("action unavilable");
+            System.out.println("not enough funds to withdraw " + value);
 
         } else {
             balance -= value;
             ledger.add(-value);
         }
     }
-    public void setDocument(String rodzajDokumentu,String nrDokumentu) {
+
+    public void setDocument(String rodzajDokumentu, String nrDokumentu) {
         documents.put(rodzajDokumentu, nrDokumentu);
     }
-
 
 
     public Map<String, String> getDocuments() {
         return documents;
 //        if (documents.containsKey("Prawo jazdy") & documents.containsValue("")){
 //            System.out.println("driving license is not added.");
-        }
     }
+}
 
 
 
