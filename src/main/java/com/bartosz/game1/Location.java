@@ -1,4 +1,4 @@
-package com.bartosz.Game1;
+package com.bartosz.game1;
 //dopisz do klasy Location obsługę ustawiania id lokacji, opisu oraz dodawania wyjść z lokacji (do istniejącego obiektu)
 //        tak aby wyjść z lokacji zgodnie z kierunkiem świata N,S,W,E
 //        w klasie game stwórz metodę prepareGame, która wypełni mapę locations lokacjami:
@@ -20,18 +20,19 @@ package com.bartosz.Game1;
 //        dodawanie nowych lokalizacji powinno się odbywa na zasadach:
 //        locations.put(0, new Location(0, "Jesteś w domu."));
 
+import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Map;
-
+import java.util.List;
+import java.util.Random;
 
 
 public class Location {
     private final int locationID;
-     String description;
-    private final HashMap<Direction, Integer> exits ;
+    private String description;
+    private final HashMap<Direction, Integer> exits;
+    private List<Skeleton> skeletonList = new ArrayList<>();
 
-
-//    konstruktor - metoda która pokrywa szkielet (klasę) mięśniami.
+    //    konstruktor - metoda która pokrywa szkielet (klasę) mięśniami.
     public Location(int locationID, String description) {
         this.locationID = locationID;
         this.description = description;
@@ -40,16 +41,21 @@ public class Location {
 
 //        nie wiem czemu akurat nowa hashmapa a nie ta z klasy (linijka 31)
         this.exits = new HashMap<>();
+        if (new Random().nextInt()%2==0){
+            this.skeletonList = MonsterListGenerator.generateSkeletonList();
+        }
     }
 
-    public Location(int locationID, HashMap<Direction, Integer> exits){
-        this.locationID=locationID;
+    public Location(int locationID, HashMap<Direction, Integer> exits) {
+        this.locationID = locationID;
         this.exits = exits;
-    };
+    }
 
-    public Location(int locationID, String description, HashMap<Direction, Integer> exits){
-        this.locationID=locationID;
-        this.description=description;
+    ;
+
+    public Location(int locationID, String description, HashMap<Direction, Integer> exits) {
+        this.locationID = locationID;
+        this.description = description;
         this.exits = exits;
     }
 
@@ -66,14 +72,14 @@ public class Location {
         return exits;
     }
 
-//    nie rozumiem zapisu { this.exits.put(direction,locationID);}
+    //    nie rozumiem zapisu { this.exits.put(direction,locationID);}
 // createexits jest metodą o parametrach direction, locactionid, która uzupełnia
 // hashmape exits (zadeklarowana w klasie).
-    public void createExit(Direction direction, int locationID){
-        if (locationID == this.locationID){
+    public void createExit(Direction direction, int locationID) {
+        if (locationID == this.locationID) {
             throw new RuntimeException("wyjście z lokacji się zapętla");
         }
-        this.exits.put(direction,locationID);
+        this.exits.put(direction, locationID);
 
     }
 
@@ -86,10 +92,15 @@ public class Location {
                 '}';
     }
 
-    public Integer takeExit (Direction direction){
+    public Integer takeExit(Direction direction) {
         return this.exits.get(direction);
     }
+
+    public List<Skeleton> getSkeletonList() {
+        return skeletonList;
+    }
 }
+
 
 
 

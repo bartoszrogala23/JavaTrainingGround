@@ -1,4 +1,4 @@
-package com.bartosz.ClassAndMethods;
+package com.bartosz.classandmethods;
 //dziedziczenie prostokąt - kwadrat
 // extends znaczy że kwadrat dziedziczy wszystko*  po prostokącie.
 

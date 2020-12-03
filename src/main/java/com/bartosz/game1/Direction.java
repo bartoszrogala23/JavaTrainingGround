@@ -1,4 +1,4 @@
-package com.bartosz.Game1;
+package com.bartosz.game1;
 
 // w enumie są nie zmienne tylko stałe i występuje jeden jedyny ezglemplarz enuma w całym kodzie.
 //enumy są niemodyfikowalne.

@@ -1,6 +1,4 @@
-package com.bartosz.ClassAndMethods;
-
-import java.sql.SQLOutput;
+package com.bartosz.classandmethods;
 
 public class geomethods {
 

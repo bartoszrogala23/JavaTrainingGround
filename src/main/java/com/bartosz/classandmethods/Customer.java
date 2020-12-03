@@ -1,4 +1,4 @@
-package com.bartosz.ClassAndMethods;
+package com.bartosz.classandmethods;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;

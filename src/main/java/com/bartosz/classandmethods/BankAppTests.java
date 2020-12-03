@@ -1,12 +1,4 @@
-package com.bartosz.ClassAndMethods;
-
-import com.sun.jdi.Value;
-
-import java.math.BigDecimal;
-import java.security.Key;
-import java.util.Locale;
-import java.util.Map;
-import java.util.Scanner;
+package com.bartosz.classandmethods;
 
 //zrobione
 // poczytaj o javafaker i jak tego uzyc zeby stworzyc np. wielu klientów  w petli(lista);

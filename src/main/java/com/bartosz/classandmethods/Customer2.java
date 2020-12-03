@@ -1,8 +1,6 @@
-package com.bartosz.ClassAndMethods;
+package com.bartosz.classandmethods;
 
-import java.math.BigDecimal;
 import java.util.*;
-import java.util.stream.Collectors;
 
 
 //<> - określają typ w kolekcji, np. List<BigDecimal> Map<String, String>
