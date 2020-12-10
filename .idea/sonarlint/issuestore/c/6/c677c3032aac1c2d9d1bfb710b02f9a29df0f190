@@ -1,0 +1,10 @@
+
+k	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( ˜Ì“ÿÿÿÿÿ
+k	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( ˜Ì“ÿÿÿÿÿ
+j	java:S116	"URename this field "dÅ‚ugoÅ›Ä‡" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¦¿ªž
+p	java:S116
+"VRename this field "szerokoÅ›Ä‡" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Šížšÿÿÿÿÿ
+V	java:S125"<This block of commented-out lines of code should be removed.(ê‘˜èÿÿÿÿÿ
+P	java:S125"<This block of commented-out lines of code should be removed.(Õ›Â
+h	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ö¥ßÇýÿÿÿÿ
+c	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(€¢–É

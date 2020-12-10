@@ -1,0 +1,24 @@
+
+b	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(ý¤Ú™
+z
+java:S14886"dImmediately return this expression instead of assigning it to the temporary variable "poletrojkata".(µ­²Ê
+Q	java:S125"<This block of commented-out lines of code should be removed.(ÕòáŽ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(ÔŒ±‚
+V	java:S125"<This block of commented-out lines of code should be removed.(„â¡ƒùÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(ŒÐ°¸ÿÿÿÿÿ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(ÅìÓÍ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(ÂÚÐ²ùÿÿÿÿ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(ëîðé
+N	java:S106 "9Replace this use of System.out or System.err by a logger.(ÜÿªŸ
+S	java:S106!"9Replace this use of System.out or System.err by a logger.(ªÓ¼áþÿÿÿÿ
+S	java:S106""9Replace this use of System.out or System.err by a logger.(²ÇûÜÿÿÿÿÿ
+S	java:S106#"9Replace this use of System.out or System.err by a logger.(ÑáòŸúÿÿÿÿ
+N	java:S106$"9Replace this use of System.out or System.err by a logger.(º§À
+S	java:S106("9Replace this use of System.out or System.err by a logger.(­ç¢·ûÿÿÿÿ
+N	java:S106)"9Replace this use of System.out or System.err by a logger.(Ô£Ù²
+N	java:S106*"9Replace this use of System.out or System.err by a logger.(¼‰ï¹
+S	java:S106+"9Replace this use of System.out or System.err by a logger.(ïÝ‡çüÿÿÿÿ
+S	java:S106,"9Replace this use of System.out or System.err by a logger.(ªÓ¼áþÿÿÿÿ
+N	java:S106-"9Replace this use of System.out or System.err by a logger.(¬µÝ™
+S	java:S106."9Replace this use of System.out or System.err by a logger.(®Ú¯¤ÿÿÿÿÿ
+M	java:S106/"9Replace this use of System.out or System.err by a logger.(š£àg
