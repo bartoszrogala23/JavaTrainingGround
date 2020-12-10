@@ -1,5 +1,19 @@
 package com.bartosz.homework.homework02122020Zad2;
 
+
+//2. Napisz program pogodynka
+//
+//        Po podaniu przez użytkownika dnia i miesiąca zaproponuj pogodę na ten dzień.
+//        Uwzględniając:
+//        - porę roku (np. jesienią jest zwykle deszczowo)
+//        - temperature (przedstawiona w stopniach Fahrenheita, Celsjusza i w Kelvinach)
+//        - uwzględnij opady
+//        -  uwzględnij  stopień zachmurzenia / nasłonecznienia
+//        -  uwzględnij  kierunek i silę wiatru
+//
+//        Podpowiedzi:
+//        Użyj Scanner, Random, List i Map
+
 import com.sun.jdi.Value;
 
 import java.security.Key;
@@ -73,6 +87,13 @@ public class Forecast {
             int choice2 = scanner.nextInt(); {
                 if (choice2<=monthList.get(choice).getNumberOfDays()){
                     monthList.get(choice).getThisDayTemp();
+                    if (monthList.get(choice).getSeason().contains("Winter")){
+                        int snowingChance = random.nextInt(100);
+                        if (snowingChance <= 80){
+                            System.out.println("it's snowing");
+                        }
+                    }
+
                     System.out.println("wind force: " + windForceList.get(random.nextInt(windForceList.size())));
                     System.out.println("wind direction: " + windDirectionList.get(random.nextInt(windDirectionList.size())));
                 }
