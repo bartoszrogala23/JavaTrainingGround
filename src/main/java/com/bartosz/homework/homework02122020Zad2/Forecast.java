@@ -65,12 +65,25 @@ public class Forecast {
             System.out.println("pick the month from 1 to 12");
             int choice = scanner.nextInt();
             System.out.println("You picked " + monthList.get(choice));
+            if (choice > monthList.size()){
+                System.out.println("there is only 12 months.");
+                continue;
+            }
+            System.out.println("pick the day");
+            int choice2 = scanner.nextInt(); {
+                if (choice2<=monthList.get(choice).getNumberOfDays()){
+                    monthList.get(choice).getThisDayTemp();
+                    System.out.println("wind force: " + windForceList.get(random.nextInt(windForceList.size())));
+                    System.out.println("wind direction: " + windDirectionList.get(random.nextInt(windDirectionList.size())));
+                }
+                else {
+                    System.out.println("the number of days in this month is: " + monthList.get(choice).getNumberOfDays());
+                }
+                }
+            }
 //            nie wiem jak zrobic z dniem - czy hashmapa czy jakoś sie odwolac do parametru?
 //            System.out.println("pick the day");
-            monthList.get(choice).getThisDayTemp();
-            System.out.println("wind force: " + windForceList.get(random.nextInt(windForceList.size())));
-            System.out.println("wind direction: " + windDirectionList.get(random.nextInt(windDirectionList.size())));
-        }
+
 
 
 

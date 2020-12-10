@@ -21,6 +21,10 @@ public class Month {
         this.avgTempCelsius = avgTempCelsius;
     }
 
+    public int getNumberOfDays() {
+        return numberOfDays;
+    }
+
     public String getName() {
         return name;
     }
