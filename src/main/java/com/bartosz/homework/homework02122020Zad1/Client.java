@@ -1,6 +1,4 @@
-package com.bartosz.homework.homework02122020;
-
-import java.util.*;
+package com.bartosz.homework.homework02122020Zad1;
 
 
 public class Client {

@@ -1,4 +1,4 @@
-package com.bartosz.homework.homework02122020;
+package com.bartosz.homework.homework02122020Zad1;
 
 import java.util.HashMap;
 import java.util.Locale;
@@ -36,6 +36,7 @@ public class Zad1 {
                 if (map.containsKey(id)) {
                     System.out.println("This ID already exists, try another one.");
                     continue;
+
                 }
                 System.out.println("Add Name:");
                 name = scanner.next();

@@ -1,9 +1,5 @@
-package com.bartosz.homework.homework02122020;
+package com.bartosz.homework.homework02122020Zad1;
 
-import com.bartosz.game1.Direction;
-import com.sun.jdi.Value;
-
-import java.security.Key;
 import java.util.*;
 
 public class ClientList {
