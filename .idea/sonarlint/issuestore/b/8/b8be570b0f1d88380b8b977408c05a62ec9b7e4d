@@ -1,19 +1,9 @@
 
-N	java:S106("9Replace this use of System.out or System.err by a logger.(ÜÃ‰•
-N	java:S106"9Replace this use of System.out or System.err by a logger.(ôÌ¿ò
-]
-java:S1126>"BReplace this if-then-else statement by a single method invocation.(™å÷¤úÿÿÿÿ
-N	java:S106*"9Replace this use of System.out or System.err by a logger.(Ý½¤ò
-S	java:S1063"9Replace this use of System.out or System.err by a logger.(ý·‡‘øÿÿÿÿ
-S	java:S106B"9Replace this use of System.out or System.err by a logger.(ûãÁùùÿÿÿÿ
 7
 java:S1116-"Remove this empty statement.(ôŸŽìúÿÿÿÿ
-N	java:S106,"9Replace this use of System.out or System.err by a logger.(±øå 
-S	java:S106K"9Replace this use of System.out or System.err by a logger.(ãŒÂÔøÿÿÿÿ
+]
+java:S11262"BReplace this if-then-else statement by a single method invocation.(‰ÈÐ•ûÿÿÿÿ
 7
 java:S11169"Remove this empty statement.(ôŸŽìúÿÿÿÿ
 ]
-java:S11262"BReplace this if-then-else statement by a single method invocation.(‰ÈÐ•ûÿÿÿÿ
-N	java:S106&"9Replace this use of System.out or System.err by a logger.(Ú‘¼Ù
-S	java:S1066"9Replace this use of System.out or System.err by a logger.(ûãÁùùÿÿÿÿ
-S	java:S106?"9Replace this use of System.out or System.err by a logger.(ý·‡‘øÿÿÿÿ
+java:S1126>"BReplace this if-then-else statement by a single method invocation.(™å÷¤úÿÿÿÿ
