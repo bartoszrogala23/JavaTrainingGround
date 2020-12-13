@@ -25,6 +25,8 @@ public class Forecast {
         Random random = new Random();
         Scanner scanner = new Scanner(System.in);
         scanner.useLocale(Locale.US);
+        WeatherModificator weatherModificator = new WeatherModificator();
+
 
         final List<String> windDirectionList = new ArrayList<>();
         windDirectionList.add("N");
@@ -85,20 +87,26 @@ public class Forecast {
             }
             System.out.println("pick the day");
             int choice2 = scanner.nextInt(); {
-                if (choice2<=monthList.get(choice).getNumberOfDays()){
+                if (choice2<=monthList.get(choice).getNumberOfDays()) {
                     monthList.get(choice).getThisDayTemp();
-                    if (monthList.get(choice).getSeason().contains("Winter")){
-                        int snowingChance = random.nextInt(100);
-                        if (snowingChance <= 80){
-                            System.out.println("it's snowing");
-                        }
+                    if (monthList.get(choice).getSeason().contains("Winter")) {
+                        weatherModificator.setPossibilityofWheater(80, "It's snowing");
                     }
-
-                    System.out.println("wind force: " + windForceList.get(random.nextInt(windForceList.size())));
-                    System.out.println("wind direction: " + windDirectionList.get(random.nextInt(windDirectionList.size())));
-                }
+                    if (monthList.get(choice).getSeason().contains("Summer")) {
+                        weatherModificator.setPossibilityofWheater(75, "It's sunny");
+                    }
+                    if (monthList.get(choice).getSeason().contains("Autumn")) {
+                        weatherModificator.setPossibilityofWheater(65, "It's foggy day");
+                    }
+                    if (monthList.get(choice).getSeason().contains("Spring")) {
+                        weatherModificator.setPossibilityofWheater(25, "It's rainy day");
+                    }
+                    }
                 else {
                     System.out.println("the number of days in this month is: " + monthList.get(choice).getNumberOfDays());
+                    continue;
+                }
+                weatherModificator.setWindStatus(windForceList, windDirectionList);
                 }
                 }
             }
@@ -112,4 +120,4 @@ public class Forecast {
 
 
     }
-}
+
