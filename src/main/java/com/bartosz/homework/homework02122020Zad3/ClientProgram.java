@@ -97,16 +97,15 @@ public class ClientProgram {
 //                            poniższy zapis znalazłem w necie
 //                            https://stackoverflow.com/questions/44500446/count-occurrences-of-value-in-a-map
 //                            nie do konca rozumiem ale działa.
+//                            wiem, że tworze nową mapę gdzie k = nazwa klienta, v = tutaj rozumiem, że zlicza mi
+//                            liczbe wystąpien imiena (+1 bo liczy od zera)
                             resultMap.put(userName, resultMap.get(userName) + 1);
-                            System.out.println(nameToCount + " is on the list.");
                             System.out.println(nameToCount + " occurencies: " + resultMap.get(userName));
                         } else {
                             resultMap.put(userName, 1);
                         }
                     }
                 }
-            } else {
-                System.out.println("This option does not exist.");
             }
 
         }
