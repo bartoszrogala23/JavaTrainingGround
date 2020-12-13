@@ -28,7 +28,7 @@ public class Forecast {
         WeatherModificator weatherModificator = new WeatherModificator();
 
 
-        final List<String> windDirectionList = new ArrayList<>();
+        List<String> windDirectionList = new ArrayList<>();
         windDirectionList.add("N");
         windDirectionList.add("E");
         windDirectionList.add("S");
@@ -38,7 +38,7 @@ public class Forecast {
         windDirectionList.add("NW");
         windDirectionList.add("SW");
 
-        final List<String> windForceList = new ArrayList<>();
+        List<String> windForceList = new ArrayList<>();
         windForceList.add("weak");
         windForceList.add("normal");
         windForceList.add("strong");
@@ -89,6 +89,8 @@ public class Forecast {
             int choice2 = scanner.nextInt(); {
                 if (choice2<=monthList.get(choice).getNumberOfDays()) {
                     monthList.get(choice).getThisDayTemp();
+//                    poniżej: przez zmienną "choice" nie umiem stwrzyć metody żeby cztery razy nie pisać
+//                    if (monthList.get(choice).getSeason().contains(
                     if (monthList.get(choice).getSeason().contains("Winter")) {
                         weatherModificator.setPossibilityofWheater(80, "It's snowing");
                     }
