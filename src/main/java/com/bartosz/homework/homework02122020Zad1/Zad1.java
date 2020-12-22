@@ -14,21 +14,25 @@ import java.util.Scanner;
 //        Wypisz elementy słownika na ekran w formie "klucz -> wartość"
 
 public class Zad1 {
+
+    private static void printPrompt(){
+        System.out.println("What would you like to do?");
+        System.out.println("1 - Add position to the list");
+        System.out.println("2 - Check the list");
+        System.out.println("3 - Exit");
+        System.out.println();
+    }
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         scanner.useLocale(Locale.US);
         int id;
         String name;
-        boolean finisher = true;
 
         HashMap<Integer, String> map = new HashMap<>();
 
         while (true) {
-            System.out.println("What would you like to do?");
-            System.out.println("1 - Add position to the list");
-            System.out.println("2 - Check the list");
-            System.out.println("3 - Exit");
-            System.out.println();
+            printPrompt();
             int choice = scanner.nextInt();
             if (choice == 1) {
                 System.out.println("Add ID:");
@@ -36,7 +40,6 @@ public class Zad1 {
                 if (map.containsKey(id)) {
                     System.out.println("This ID already exists, try another one.");
                     continue;
-
                 }
                 System.out.println("Add Name:");
                 name = scanner.next();
@@ -54,17 +57,11 @@ public class Zad1 {
             }
             if (choice == 3) {
                 break;
-            }
-            else {
+            } else {
                 System.out.println("This option does not exist.");
             }
 
-
-
         }
-
     }
-
-
 }
 

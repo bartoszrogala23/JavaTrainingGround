@@ -1,16 +1,6 @@
 
-]	java:S125"<This block of commented-out lines of code should be removed.(­ãÁØüÿÿÿÿ8Ö®¨ıá.
-S
-java:S1854"6Remove this useless assignment to local variable "o1".(óùÎÅ8¼ÖÎâ.
-M
-java:S1128"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8­ãŞ¨â.
 M
 java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8–õñ§â.
-U	java:S106"9Replace this use of System.out or System.err by a logger.(Î’ÛÚ8âÖÈÍâ.
-T	java:S106"9Replace this use of System.out or System.err by a logger.(õŠ [8»•ÉÍâ.
-Z	java:S106"9Replace this use of System.out or System.err by a logger.(…õü†ÿÿÿÿÿ8’òÎâ.
-U	java:S106"9Replace this use of System.out or System.err by a logger.(œæˆö8ÅÀÒÎâ.
-Z	java:S106"9Replace this use of System.out or System.err by a logger.(¡çö—üÿÿÿÿ8“·ÑÎâ.
-D
-java:S1481"'Remove this unused "o1" local variable.(óùÎÅ8¼ÖÎâ.
-U	java:S106"9Replace this use of System.out or System.err by a logger.(­å´8•ÑÎÍâ.
+M
+java:S1128"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8­ãŞ¨â.
+]	java:S125"<This block of commented-out lines of code should be removed.(­ãÁØüÿÿÿÿ8Ö®¨ıá.

@@ -10,6 +10,9 @@ public class geomethods {
         double t1 = obliczpoletrojkata(10, 5);
         System.out.println(t1);
 
+
+
+
 //        w linijce nad (" double t3 = Obliczacz...")  nie potrzebujesz
 //        obiektu ( Obliczacz obliczacz = new Obliczacz();) żeby odwołać sie do statycznej metody;
 //        jesli chceszsie odwolac do jakiejkolwiek niestatycznej metody to musisz miec obiekt (l16)

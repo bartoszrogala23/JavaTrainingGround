@@ -27,20 +27,15 @@ public class GameClearVersion {
         cave.createExit(N, 2);
         cave.createExit(S, 3);
 
-
         ArrayList<Location> locationList = Lists.newArrayList(crossroads, home, castle, cave);
         for (Location singleLocation : locationList) {
             locations.put(singleLocation.getLocationID(), singleLocation);
         }
     }
 
-
-
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         scanner.useLocale(Locale.US);
-
-
 
         prepareGame();
         Integer currentLocationID = 2;
@@ -51,16 +46,13 @@ public class GameClearVersion {
             System.out.println("avilable exits: ");
             for (Map.Entry<Direction, Integer> exit :
                     locations.get(currentLocationID).getExits().entrySet()) {
-// nie umiem sie dostać do decription;
                 System.out.print(exit.getKey() + " ");
                 System.out.println(locations.get(exit.getValue()).getDescription());
-
             }
-            if (locations.get(currentLocationID).getSkeletonList().isEmpty()){
+            if (locations.get(currentLocationID).getSkeletonList().isEmpty()) {
                 System.out.println("no enemies here, you're safe.");
-            }
-            else {
-               List<Skeleton> skeletons = locations.get(currentLocationID).getSkeletonList();
+            } else {
+                List<Skeleton> skeletons = locations.get(currentLocationID).getSkeletonList();
                 System.out.println("there are " + skeletons.size() + " skeletons.");
             }
             System.out.println("Where are you going?: ");

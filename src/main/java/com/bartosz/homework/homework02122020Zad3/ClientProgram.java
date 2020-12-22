@@ -25,6 +25,8 @@ package com.bartosz.homework.homework02122020Zad3;
 // propozycja wyboru w formie metody - najpewniej można zrobic metode która posiada atrybuty:
 // int actionNumber (u mnie liczby 1 -7), String message, String choice - scanner.next()
 
+// nie uzyj ID tylko kluczem ma być imie a value to ilość wystąpień imienia.
+
 
 import java.util.*;
 
@@ -74,8 +76,9 @@ public class ClientProgram {
                 System.out.println(clientMap);
                 System.out.println("type ID number of person who you'd like to remove from the list");
                 int deleteName = scanner.nextInt();
-                if (clientMap.containsKey(deleteName)) ;
-                clientMap.remove(deleteName);
+//                if (clientMap.containsKey(deleteName)) {
+                    clientMap.remove(deleteName);
+//                }
 //                nie wiem jak zrobic zapis: "jeśli clientmap nie posiada Key (deleteName){
 //               sout " podany klucz nie isnieje"
             }
@@ -87,12 +90,14 @@ public class ClientProgram {
                 }
             }
             if (choice == 6) {
-                System.out.println("which name occurencies you'd like to count?");
+                System.out.println("which name occurences you'd like to count?");
                 String nameToCount = scanner.next();
                 if (clientMap.containsValue(nameToCount)) {
                     Map<String, Integer> resultMap = new HashMap<String, Integer>();
+//                    lepszy bylby for na entry albo na vakue - bardziej na value
                     for (int key : clientMap.keySet()) {
-                        String userName = (String) clientMap.get(nameToCount);
+//dwie ponizsze linijki nie dzialaja. odwolujesz sie do klucza który nie jest w clientmap.
+                        String userName = clientMap.get(nameToCount);
                         if (resultMap.containsKey(userName)) {
 //                            poniższy zapis znalazłem w necie
 //                            https://stackoverflow.com/questions/44500446/count-occurrences-of-value-in-a-map
@@ -100,7 +105,7 @@ public class ClientProgram {
 //                            wiem, że tworze nową mapę gdzie k = nazwa klienta, v = tutaj rozumiem, że zlicza mi
 //                            liczbe wystąpien imiena (+1 bo liczy od zera)
                             resultMap.put(userName, resultMap.get(userName) + 1);
-                            System.out.println(nameToCount + " occurencies: " + resultMap.get(userName));
+                            System.out.println(nameToCount + " occurences: " + resultMap.get(userName));
                         } else {
                             resultMap.put(userName, 1);
                         }

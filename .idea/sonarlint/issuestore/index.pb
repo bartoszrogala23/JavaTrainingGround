@@ -43,12 +43,8 @@ j
 :src/main/java/com/bartosz/collections/HashMapPractise.java,b\5\b5dcc518db3b4931cbbfd0386dcc5424d45126f3
 j
 :src/main/java/com/bartosz/homework/LoginHomeworkWhile.java,3\6\3648f4c748c28d5d0dd73e264d31650459cafd98
-w
-Gsrc/main/java/com/bartosz/homework/homework02122020Zad1/ClientList.java,2\c\2cf6c52d37562b0523d1d914d285b2e771fc970f
 k
 ;src/main/java/com/bartosz/collections/HashMapPractise2.java,6\0\60ca9064c588d6472609cd6dadd3aa02f8adb026
-S
-#.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0
 e
 5src/main/java/com/bartosz/homework/LoopPractise2.java,1\d\1d59616d2e04e16a3fade527c60232fa4cafcd20
 q
@@ -57,8 +53,6 @@ v
 Fsrc/main/java/com/bartosz/classandmethods/javastartwww/UstawPunkt.java,4\6\46e2cfcd1725871f7b3e01184d43f5c20f3acb70
 r
 Bsrc/main/java/com/bartosz/homework/homework02122020Zad2/Month.java,1\4\14395ea80559dd3e63c9bfc889bce7a3f458a8d4
-s
-Csrc/main/java/com/bartosz/homework/homework02122020Zad1/Client.java,d\f\df90b498044e932190803f0fa64d21bc9a3f4675
 q
 Asrc/main/java/com/bartosz/homework/homework02122020Zad1/Zad1.java,3\4\3486425aaa29b30f6766c6de09c02442b9ed7b7d
 s
@@ -71,3 +65,13 @@ h
 8src/main/java/com/bartosz/homework/MapHomeworkTests.java,b\b\bb82864ba9cdf8b465c691cda66c8856db364456
 c
 3src/main/java/com/bartosz/homework/MapHomework.java,d\3\d320951ebd2d1d5a2f2d8bad34d3d05ebb719903
+c
+3src/main/java/com/bartosz/loops/DoWhileExample.java,0\6\0665e398ba04d3f0a177ced84ae46b2f541dbb7d
+
+Osrc/main/java/com/bartosz/homework/homework02122020Zad2/WeatherModificator.java,9\e\9efb67db0f776216bba330dae680e8ae66245962
+s
+Csrc/main/java/com/bartosz/homework/homework02122020Zad1/Zad1_1.java,5\a\5a4d99cba758c911599f9d185dd5342870f808ae
+7
+pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
+h
+8src/main/java/com/bartosz/homework/LoginHomeworkFor.java,f\c\fcc15a469f5a634bcff96f0e5490e730adfd30c2
