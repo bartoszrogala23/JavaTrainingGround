@@ -27,7 +27,8 @@ public class Zad1_1 {
                 Scanner scanner = new Scanner(System.in);
                 return scanner.nextInt();
 //                return konczy wykonanie danej metody i zwraca wartość.
-            } catch (InputMismatchException e) {
+            }
+            catch (InputMismatchException e) {
                 System.out.println("pls provide Integer value.");
             }
         }
@@ -43,7 +44,7 @@ public class Zad1_1 {
 
         actions.put(1, () -> {
             System.out.println("Add ID:");
-            int id = scanner.nextInt();
+            int id = askUserForAnInt();
             if (map.containsKey(id)) {
                 System.out.println("This ID already exists, try another one.");
             } else {

@@ -28,7 +28,6 @@ public class WeatherModificator {
     public void getWindForce() {
         System.out.println(windForce);
     }
-
     public void getWindDirection() {
         System.out.println(windDirection);
     }

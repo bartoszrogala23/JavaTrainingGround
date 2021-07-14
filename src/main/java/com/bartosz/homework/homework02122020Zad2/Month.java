@@ -1,24 +1,27 @@
 package com.bartosz.homework.homework02122020Zad2;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Random;
 
 public class Month {
     Random random = new Random();
-    private String name;
-    private int numberOfDays;
-    private String season;
-    private int avgTempCelsius;
-    private int thisDayTempCelsius = random.nextInt(avgTempCelsius +6)+(avgTempCelsius -3);
-    private int tempFahrenheit = thisDayTempCelsius * 2 + 32;
-    private int tempKelvin = thisDayTempCelsius + 273;
+    private final String name;
+    private final int numberOfDays;
+    private final String season;
+    private int maxBoundTempCelsius;
+    private int minBoundTempCelsius;
+    private final int thisDayTempCelsius = random.nextInt(maxBoundTempCelsius - minBoundTempCelsius)
+            + minBoundTempCelsius;
+    private final int tempFahrenheit;
+    private final int tempKelvin;
 
-    public Month(String name, int numberOfDays, String season, int avgTempCelsius) {
+    public Month(String name, int numberOfDays, String season, int maxBoundTempCelsius, int minBoundTempCelsius) {
         this.name = name;
         this.numberOfDays = numberOfDays;
         this.season = season;
-        this.avgTempCelsius = avgTempCelsius;
+        this.maxBoundTempCelsius = maxBoundTempCelsius;
+        this.minBoundTempCelsius = minBoundTempCelsius;
+        tempKelvin = thisDayTempCelsius + 273;
+        tempFahrenheit = (thisDayTempCelsius * 2) + 32;
     }
 
     public int getNumberOfDays() {
@@ -33,12 +36,9 @@ public class Month {
         return season;
     }
 
-    public int getAvgTempCelsius() {
-        return avgTempCelsius;
-    }
 
     public int getThisDayTemp() {
-        System.out.println("todays temperature is: " + thisDayTempCelsius + "C, " + tempFahrenheit + "F, " +  tempKelvin + "K.");
+        System.out.println("todays temperature is: " + thisDayTempCelsius + "C, " + tempFahrenheit + "F, " + tempKelvin + "K.");
         return thisDayTempCelsius;
     }
 

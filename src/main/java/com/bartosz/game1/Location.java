@@ -41,7 +41,7 @@ public class Location {
 
 //        nie wiem czemu akurat nowa hashmapa a nie ta z klasy (linijka 31)
         this.exits = new HashMap<>();
-        if (new Random().nextInt()%2==0){
+        if (new Random().nextInt() % 2 == 0) {
             this.skeletonList = MonsterListGenerator.generateSkeletonList();
         }
     }
@@ -72,8 +72,8 @@ public class Location {
         return exits;
     }
 
-    //    nie rozumiem zapisu { this.exits.put(direction,locationID);}
-// createexits jest metodą o parametrach direction, locactionid, która uzupełnia
+
+    // createexits jest metodą o parametrach direction, locactionid, która uzupełnia
 // hashmape exits (zadeklarowana w klasie).
     public void createExit(Direction direction, int locationID) {
         if (locationID == this.locationID) {
@@ -85,11 +85,9 @@ public class Location {
 
     @Override
     public String toString() {
-        return "Location{" +
-                "locationID=" + locationID +
+        return "locationID=" + locationID +
                 ", description='" + description + '\'' +
-                ", exits=" + exits +
-                '}';
+                ", exits=" + exits;
     }
 
     public Integer takeExit(Direction direction) {
@@ -99,6 +97,8 @@ public class Location {
     public List<Skeleton> getSkeletonList() {
         return skeletonList;
     }
+
+
 }
 
 

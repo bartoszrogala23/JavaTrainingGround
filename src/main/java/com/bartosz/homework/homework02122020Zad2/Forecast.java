@@ -19,24 +19,23 @@ import java.util.*;
 public class Forecast {
 
     public static void main(String[] args) {
-        Random random = new Random();
         Scanner scanner = new Scanner(System.in);
         scanner.useLocale(Locale.US);
         WeatherModificator weatherModificator = new WeatherModificator();
 
 
-        Month january = new Month("january", 31, "Winter", 2);
-        Month february = new Month("february", 28, "Winter", 4);
-        Month march = new Month("march", 31, "Spring", 4);
-        Month april = new Month("april", 30, "Spring", 12);
-        Month may = new Month("may", 31, "Spring", 17);
-        Month june = new Month("june", 30, "Summer", 23);
-        Month july = new Month("july", 31, "Summer", 25);
-        Month august = new Month("august", 31, "Summer", 19);
-        Month september = new Month("september", 30, "Autumn", 18);
-        Month october = new Month("october", 31, "Autumn", 15);
-        Month november = new Month("november", 30, "Autumn", 8);
-        Month december = new Month("december", 31, "Winter", 3);
+        Month january = new Month("january", 31, "Winter", 6, 1);
+        Month february = new Month("february", 28, "Winter", 4, -6);
+        Month march = new Month("march", 31, "Spring", 7, -1);
+        Month april = new Month("april", 30, "Spring", 12, 3);
+        Month may = new Month("may", 31, "Spring", 17, 10);
+        Month june = new Month("june", 30, "Summer", 23, 15);
+        Month july = new Month("july", 31, "Summer", 25, 15);
+        Month august = new Month("august", 31, "Summer", 22, 9);
+        Month september = new Month("september", 30, "Autumn", 18, 3);
+        Month october = new Month("october", 31, "Autumn", 15, 2);
+        Month november = new Month("november", 30, "Autumn", 8, 1);
+        Month december = new Month("december", 31, "Winter", 3,0);
 
         Map<Integer, Month> monthList = new HashMap<>();
         monthList.put(1, january);
@@ -52,9 +51,6 @@ public class Forecast {
         monthList.put(11, november);
         monthList.put(12, december);
 
-//        generator siły i kierunku wiatru
-//            System.out.println("wind force: " + windForceList.get(random.nextInt(windForceList.size())));
-//            System.out.println("wind direction: " + windDirectionList.get(random.nextInt(windDirectionList.size())));
 
         System.out.println("check the forecast.");
         while (true) {
@@ -86,7 +82,6 @@ public class Forecast {
                     }
                 } else {
                     System.out.println("the number of days in this month is: " + monthList.get(choice).getNumberOfDays());
-                    continue;
                 }
             }
         }

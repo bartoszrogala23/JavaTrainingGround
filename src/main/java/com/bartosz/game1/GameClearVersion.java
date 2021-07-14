@@ -31,6 +31,9 @@ public class GameClearVersion {
         for (Location singleLocation : locationList) {
             locations.put(singleLocation.getLocationID(), singleLocation);
         }
+
+
+
     }
 
     public static void main(String[] args) {
@@ -39,6 +42,7 @@ public class GameClearVersion {
 
         prepareGame();
         Integer currentLocationID = 2;
+
 
         while (true) {
             System.out.println("Your current location: " + locations.get
@@ -54,6 +58,15 @@ public class GameClearVersion {
             } else {
                 List<Skeleton> skeletons = locations.get(currentLocationID).getSkeletonList();
                 System.out.println("there are " + skeletons.size() + " skeletons.");
+//                System.out.println("what do you want to do?");
+//                System.out.println("attack or flee?");
+//                if(scanner.hasNext("attack")) {
+//                    locations.get(currentLocationID).getSkeletonList().clear();
+//                    System.out.println("there are " + skeletons.size() + " skeletons now.");
+//                }
+//                if(scanner.hasNext("flee")) {
+//                    continue;
+//                }
             }
             System.out.println("Where are you going?: ");
             String direction = scanner.next();

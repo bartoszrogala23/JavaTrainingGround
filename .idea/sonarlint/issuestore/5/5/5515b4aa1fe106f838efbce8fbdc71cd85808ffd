@@ -1,10 +1,11 @@
 
-M
-java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8Ø¹ö¨â.
-M
-java:S1128"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8¬ »¨â.
-X	java:S125"<This block of commented-out lines of code should be removed.(ÜŞùÔ8Ò½…üá.
 V
-java:S5993"9Change the visibility of this constructor to "protected".(Ç…ã²8–øƒÎâ.
+java:S5993"9Change the visibility of this constructor to "protected".(õ³—8–øƒÎâ.
+M
+java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8Ø¹ö¨â.
+M
+java:S1128"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8¬ »¨â.
+T
+java:S1128"7Remove this unused import 'com.github.javafaker.Faker'.(û¹ªÕ8ò®‚ƒñ.
 V
-java:S5993"9Change the visibility of this constructor to "protected".(õ³—8–øƒÎâ.
+java:S5993"9Change the visibility of this constructor to "protected".(Ç…ã²8–øƒÎâ.

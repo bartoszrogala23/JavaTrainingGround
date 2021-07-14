@@ -6,8 +6,7 @@ import java.util.Random;
 
 public class Ogre extends Monster {
 
-    public Ogre(String name, int hp, int dmg) {
-        super(name, hp, dmg);
+    public Ogre(String name, int hp, int dmg) { super(name, hp, dmg);
     }
 
     public Ogre(String name) {

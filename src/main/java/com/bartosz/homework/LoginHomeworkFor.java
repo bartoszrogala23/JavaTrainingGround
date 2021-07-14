@@ -10,8 +10,8 @@ public class LoginHomeworkFor {
 
         String login = "20907654";
         String password = "H4sło66";
-        String login_answer = "";
-        String password_answer = "";
+        String loginAnswer = "";
+        String passwordAnswer = "";
         boolean isLoginCorrect = false;
 
         Scanner scanner = new Scanner(System.in);
@@ -22,8 +22,8 @@ public class LoginHomeworkFor {
 
         for (int attempt = 0; attempt < 5; attempt++ ) {
             System.out.println("login:");
-            login_answer = scanner.next();
-            if (login_answer.equals(login)) {
+            loginAnswer = scanner.next();
+            if (loginAnswer.equals(login)) {
                 isLoginCorrect = true;
                 break;
             }
@@ -32,8 +32,8 @@ public class LoginHomeworkFor {
         if (isLoginCorrect) {
             for (int attempt2 = 0; attempt2 < 3; ) {
                 System.out.println("password:");
-                password_answer = scanner.next();
-                if (password_answer.equals(password)) {
+                passwordAnswer = scanner.next();
+                if (passwordAnswer.equals(password)) {
                     System.out.println("You are logged in.");
                     break;
                 } else {
@@ -46,7 +46,7 @@ public class LoginHomeworkFor {
 
 
 //                System.out.println("password:");
-//                password_answer = scanner2.next();
+//                passwordAnswer = scanner2.next();
 
 //                if (isLoginCorrect) {
 //                    System.out.println("You are logged in");

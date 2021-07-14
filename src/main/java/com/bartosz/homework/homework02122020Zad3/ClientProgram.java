@@ -32,6 +32,17 @@ import java.util.*;
 
 public class ClientProgram {
 
+    private static void printPrompt() {
+        System.out.println("What would you like to do?");
+        System.out.println("1 - Add position to the list");
+        System.out.println("2 - Check the list");
+        System.out.println("3 - Delete from the list");
+        System.out.println("4 - Exit");
+        System.out.println("5 - Check if name is on the list");
+        System.out.println("6 - Count the name occurences");
+        System.out.println();
+    }
+
     public static void main(String[] args) {
         List<String> clientList = new ArrayList<>();
         Map<Integer, String> clientMap = new HashMap<>();
@@ -43,14 +54,7 @@ public class ClientProgram {
         Client client = new Client();
 
         while (true) {
-            System.out.println("What would you like to do?");
-            System.out.println("1 - Add position to the list");
-            System.out.println("2 - Check the list");
-            System.out.println("3 - Delete from the list");
-            System.out.println("4 - Exit");
-            System.out.println("5 - Check if name is on the list");
-            System.out.println("6 - Count the name occurences");
-            System.out.println();
+            printPrompt();
             int choice = scanner.nextInt();
             if (choice == 1) {
                 System.out.println("put name:");

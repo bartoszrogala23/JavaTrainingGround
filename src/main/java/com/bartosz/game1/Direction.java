@@ -20,6 +20,7 @@ public enum Direction {
             return S;
         }
         throw new RuntimeException("nie ma takiego kierunku");
+
     }
 }
 

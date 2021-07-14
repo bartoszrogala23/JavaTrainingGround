@@ -15,5 +15,7 @@ public class UstawPunkt {
         System.out.println(punkt.getY());
 
 
+
+
     }
 }
